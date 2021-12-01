@@ -9,7 +9,14 @@
     <h1>Property Binding</h1>
   </div><br>
 
-  <button [disabled]="allowFunction">Add Server</button>
+  <button class="btn btn-primary" [disabled]="allowFunction">Add Server</button>
   <br><!--property binding used to button functionality, set paths programmatically, and share values between components.-->
   <div><img [src]="imageUrl"></div>
+  <!--event binding-->
+  <br>
+  <button class="btn btn-info" (click)="greet()"> event</button>
+  <h2>Two-way Binding</h2>
+  <input type="text" [(ngModel)]="firstName" name="firstName" placeholder="type your firstname here">
+  <br>
+  <h2>{{firstName}}</h2>
 </div>
