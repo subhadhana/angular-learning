@@ -1,0 +1,15 @@
+<div class="container">
+
+  <div class="card-header">
+    <!--string interpolation using data from .ts (ts ->html),Text interpolation lets you incorporate dynamic string values into your Html-->
+    <h1>{{title}}</h1>
+  </div>
+
+  <div class="card-body">
+    <h1>Property Binding</h1>
+  </div><br>
+
+  <button [disabled]="allowFunction">Add Server</button>
+  <br><!--property binding used to button functionality, set paths programmatically, and share values between components.-->
+  <div><img [src]="imageUrl"></div>
+</div>
