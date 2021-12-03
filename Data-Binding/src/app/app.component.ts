@@ -21,7 +21,15 @@ export class AppComponent {
 
   //event binding
   greet() {
-  alert("hello");
+    alert('hello');
   }
-  firstName:string="subha";
+  firstName: string = 'subha';
+  courses = ['java', 'python', 'sql'];
+
+  employee = [
+    { name: 'Ram', email: 'ram@gmail.com', age: 23 },
+    { name: 'Shyam', email: 'shyam23@gmail.com', age: 28 },
+    { name: 'John', email: 'john@gmail.com', age: 33 },
+    { name: 'Bob', email: 'bob32@gmail.com', age: 41 },
+  ];
 }

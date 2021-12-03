@@ -2,7 +2,7 @@
 
   <div class="card-header">
     <!--string interpolation using data from .ts (ts ->html),Text interpolation lets you incorporate dynamic string values into your Html-->
-    <h1>{{title}}</h1>
+    <h1 style="text-align: center;">{{title}}</h1>
   </div>
 
   <div class="card-body">
@@ -10,7 +10,8 @@
   </div><br>
 
   <button class="btn btn-primary" [disabled]="allowFunction">Add Server</button>
-  <br><!--property binding used to button functionality, set paths programmatically, and share values between components.-->
+  <br>
+  <!--property binding used to button functionality, set paths programmatically, and share values between components.-->
   <div><img [src]="imageUrl"></div>
   <!--event binding-->
   <br>
@@ -19,4 +20,46 @@
   <input type="text" [(ngModel)]="firstName" name="firstName" placeholder="type your firstname here">
   <br>
   <h2>{{firstName}}</h2>
+
+  <!--Structural directives , * means structural directives-->
+  <div>
+    <div class="card" style="text-align: center;">
+      <h1>Directives</h1>
+    </div>
+    <h3>Structural Directives</h3>
+
+    <div *ngIf="courses.length==0">
+      <p>empty</p>
+    </div>
+    <div *ngIf="courses.length>0">
+      <h3>list of courses</h3>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let course of courses, index as i">{{i}} {{course}}</li>
+      </ul>
+    </div>
+    <br>
+    <div class="card">
+      <table class="table table-success table-striped">
+        <thead>
+          <tr >
+            <th>id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tr *ngFor="let employ of employee , index as id">
+          <td>{{id}}</td>
+          <td>{{employ.name}}</td>
+          <td>{{employ.email}}</td>
+            <td>{{employ.age}}</td>
+
+        </tr>
+      </table>
+      <ul>
+        <li *ngFor="let employ of employee">{{employ.name}} {{employ.email}} {{employ.age}}</li>
+      </ul>
+
+    </div>
+  </div>
 </div>
