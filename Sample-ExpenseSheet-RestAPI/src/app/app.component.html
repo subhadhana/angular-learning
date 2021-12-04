@@ -1,0 +1,30 @@
+<div class="container">
+<div class="card bg-success p-2 text-dark bg-opacity-10">
+  <div class="card-header">
+    <h1>Expense Sheet</h1>
+    <div class="card">
+      <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">price</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr scope="row" *ngFor="let product of products">
+          <td>{{product.id}}</td>
+          <td>{{product.title}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.date}}</td>
+          <td><button class="btn btn-primary">Edit</button></td>
+          <td><button class="btn btn-danger">Delete</button></td>
+
+        </tr>
+        
+      </tbody>
+    </table></div>
+  </div>
+</div>
+</div>

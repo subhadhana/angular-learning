@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Cake - Mini Cheesecake",
+      "price": 97,
+      "date": "4/6/2021"
+    },
+    {
+      "id": 2,
+      "title": "Coriander - Seed",
+      "price": 64,
+      "date": "12/24/2020"
+    },
+    {
+      "id": 3,
+      "title": "Puree - Kiwi",
+      "price": 90,
+      "date": "4/10/2021"
+    },
+    {
+      "id": 4,
+      "title": "Chocolate - Dark Callets",
+      "price": 16,
+      "date": "2/1/2021"
+    },
+    {
+      "id": 4,
+      "title": "Chocolate - Dark Callets",
+      "price": 16,
+      "date": "2/1/2021"
+    },
+    {
+      "id": 5,
+      "title": "Pork Loin Cutlets",
+      "price": 64,
+      "date": "10/14/2021"
+    },
+    {
+      "id": 6,
+      "title": "Soup - Tomato Mush. Florentine",
+      "price": 74,
+      "date": "8/26/2021"
+    },
+    {
+      "id": 7,
+      "title": "Steel Wool S.o.s",
+      "price": 47,
+      "date": "1/22/2021"
+    },
+    {
+      "id": 8,
+      "title": "Pasta - Canelloni, Single Serve",
+      "price": 39,
+      "date": "6/28/2021"
+    },
+    {
+      "id": 9,
+      "title": "Bread Fig And Almond",
+      "price": 59,
+      "date": "3/23/2021"
+    },
+    {
+      "id": 10,
+      "title": "Monkfish Fresh - Skin Off",
+      "price": 89,
+      "date": "12/24/2020"
+    }
+  ]
+}
