@@ -1,30 +1,58 @@
 <div class="container">
-<div class="card bg-success p-2 text-dark bg-opacity-10">
-  <div class="card-header">
-    <h1>Expense Sheet</h1>
-    <div class="card">
-      <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Title</th>
-          <th scope="col">price</th>
-          <th scope="col">Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr scope="row" *ngFor="let product of products">
-          <td>{{product.id}}</td>
-          <td>{{product.title}}</td>
-          <td>{{product.price}}</td>
-          <td>{{product.date}}</td>
-          <td><button class="btn btn-primary">Edit</button></td>
-          <td><button class="btn btn-danger">Delete</button></td>
+  <div class="card bg-success p-2 text-dark bg-opacity-10">
+    <div class="banner">
+      <h1>Expense Sheet</h1>
+    </div>
 
-        </tr>
-        
-      </tbody>
-    </table></div>
+    <div class="card-body">
+      <h2>Create Product</h2>
+      <form>
+        <div class="mb-3">
+          <label for="id" class="form-label">ID</label>
+          <input type="text" class="form-control" id="id" [(ngModel)]="model.id" name="id">
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Product Title</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="model.name" name="name">
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input type="text" class="form-control" id="price" [(ngModel)]="model.price" name="price">
+        </div>
+        <div class="mb-3">
+          <label for="date" class="form-label">Date </label>
+          <input type="date" class="form-control" id="date" [(ngModel)]="model.date" name="date">
+        </div>
+
+       <!-- adding event binding on click event-->
+        <button type="submit" class="btn btn-primary" (click)="buttonClickEvent()">Add</button>
+      </form>
+
+
+      <h2>List of Expenses</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">price</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr scope="row" *ngFor="let product of products">
+            <td>{{product.id}}</td>
+            <td>{{product.title}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.date}}</td>
+            <td><button class="btn btn-primary">Edit</button></td>
+            <td><button class="btn btn-danger">Delete</button></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
-</div>
+<router-outlet></router-outlet>
