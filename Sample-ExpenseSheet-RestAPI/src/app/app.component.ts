@@ -22,5 +22,19 @@ export class AppComponent implements OnInit {
   }
   buttonClickEvent() {
     console.log('click event');
+    //alert('click event'+this.model.name+""+this.model.id);
+    this.products.push(this.model);
+    this.model={};
+  }
+
+  deleteFunction(i:any){
+
+    alert("do you want to delete the product?"+i);
+    this.products.splice(i,1);
+  }
+
+  editFunction(i:any){
+    alert("do you want to edit the product?"+i);
+
   }
 }

@@ -13,7 +13,7 @@
         </div>
         <div class="mb-3">
           <label for="name" class="form-label">Product Title</label>
-          <input type="text" class="form-control" id="name" [(ngModel)]="model.name" name="name">
+          <input type="text" class="form-control" id="title" [(ngModel)]="model.title" name="title">
         </div>
         <div class="mb-3">
           <label for="price" class="form-label">Price</label>
@@ -40,13 +40,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr scope="row" *ngFor="let product of products">
+          <tr scope="row" *ngFor="let product of products; let i=index">
             <td>{{product.id}}</td>
             <td>{{product.title}}</td>
             <td>{{product.price}}</td>
             <td>{{product.date}}</td>
-            <td><button class="btn btn-primary">Edit</button></td>
-            <td><button class="btn btn-danger">Delete</button></td>
+            <td><button class="btn btn-primary" (click)="editFunction(i)">Edit</button><span> </span>
+            <button class="btn btn-danger" (click)="deleteFunction(i)">Delete</button></td>
 
           </tr>
 
