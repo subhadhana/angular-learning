@@ -23,7 +23,9 @@ export class AppComponent {
   greet() {
     alert('hello');
   }
+  //twoway
   firstName: string = 'subha';
+
   courses = ['java', 'python', 'sql'];
 
   employee = [
